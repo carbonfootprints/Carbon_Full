@@ -14,7 +14,7 @@
             <i class="ti ti-dashboard"></i>
           </li>
           <li class="pc-item">
-            <a href="{{asset('default')}}" class="pc-link"
+            <a href="{{route('default')}}" class="pc-link"
               ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Default</span></a
             >
           </li>
@@ -24,24 +24,18 @@
             <i class="ti ti-apps"></i>
           </li>
           <li class="pc-item">
-            <a href="../elements/bc_typography.html" class="pc-link">
-              <span class="pc-micon"><i class="ti ti-typography"></i></span>
-              <span class="pc-mtext">Typography</span>
+            <a href="{{route('admin.production')}}" class="pc-link">
+              
+              <span class="pc-micon"><i class="ti ti-inbox"></i></span>
+              <span class="pc-mtext">Production System</span>
             </a>
           </li>
           <li class="pc-item">
-            <a href="../elements/bc_color.html" class="pc-link">
+            <a href="{{route('admin.boundary')}}" class="pc-link">
               <span class="pc-micon"><i class="ti ti-color-swatch"></i></span>
-              <span class="pc-mtext">Color</span>
+              <span class="pc-mtext">Boundary</span>
             </a>
           </li>
-          <li class="pc-item">
-            <a href="../elements/icon-tabler.html" class="pc-link">
-              <span class="pc-micon"><i class="ti ti-plant-2"></i></span>
-              <span class="pc-mtext">Icons</span>
-            </a>
-          </li>
-  
           <li class="pc-item pc-caption">
             <label>Lets Calculate</label>
             <i class="ti ti-brand-chrome"></i>
@@ -52,13 +46,13 @@
               ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
             ></a>
             <ul class="pc-submenu">
-              <li class="pc-item"><a class="pc-link" href="#!">Organisation</a></li>
+              <li class="pc-item"><a class="pc-link" href="{{route('admin.organisation')}}">Organisation</a></li>
               <li class="pc-item pc-hasmenu">
-                <a href="#!" class="pc-link"
+                <a href="#" class="pc-link"
                   >Direct GHG<span class="pc-arrow"><i data-feather="chevron-right"></i></span
                 ></a>
                 <ul class="pc-submenu">
-                  <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                  <li class="pc-item"><a class="pc-link" href="{{route('admin.direct')}}">Level 3.1</a></li>
                   <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
                   <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link"
@@ -72,11 +66,11 @@
                 </ul>
               </li>
               <li class="pc-item pc-hasmenu">
-                <a href="#!" class="pc-link"
+                <a href="#" class="pc-link"
                   >Indirect GHG<span class="pc-arrow"><i data-feather="chevron-right"></i></span
                 ></a>
                 <ul class="pc-submenu">
-                  <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                  <li class="pc-item"><a class="pc-link" href="{{route('admin.indirect')}}">Level 3.1</a></li>
                   <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
                   <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link"
@@ -91,12 +85,7 @@
               </li>
             </ul>
           </li>
-          <li class="pc-item">
-            <a href="../other/sample-page.html" class="pc-link">
-              <span class="pc-micon"><i class="ti ti-brand-chrome"></i></span>
-              <span class="pc-mtext">Sample page</span>
-            </a>
-          </li>
+         
   
         </ul>
        

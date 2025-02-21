@@ -63,6 +63,11 @@
         <div class="pc-content">
 
             @yield('default')
+            @yield('production')
+            @yield('boundary')
+            @yield('direct')
+            @yield('indirect')
+            @yield('organisation')
            
 
         </div>
