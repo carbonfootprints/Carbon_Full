@@ -35,53 +35,19 @@
                         <span class="pc-mtext">Boundary</span>
                     </a>
                 </li>
-                <li class="pc-item pc-caption">
-                    <label>Lets Calculate</label>
-                    <i class="ti ti-brand-chrome"></i>
+                <li class="pc-item">
+                    <a href="{{ route('admin.visit') }}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-file-plus"></i></span>
+                        <span class="pc-mtext">Create Visit</span>
+                    </a>
                 </li>
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-menu"></i></span><span
-                            class="pc-mtext">Menu levels</span><span class="pc-arrow"><i
-                                data-feather="chevron-right"></i></span></a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item"><a class="pc-link" href="{{ route('admin.organisation') }}">Organisation</a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#" class="pc-link">Direct GHG<span class="pc-arrow"><i
-                                        data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="{{ route('admin.direct') }}">Level 3.1</a>
-                                </li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i
-                                                data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#" class="pc-link">Indirect GHG<span class="pc-arrow"><i
-                                        data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="{{ route('admin.indirect') }}">Level
-                                        3.1</a></li>
-                                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i
-                                                data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                <li class="pc-item">
+                    <a href="{{ route('admin.organisation') }}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Lets Calculate</span>
+                    </a>
                 </li>
+                
 
 
             </ul>

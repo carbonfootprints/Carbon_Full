@@ -6,6 +6,7 @@ use App\Http\Controllers\DirectController;
 use App\Http\Controllers\IndirectController;
 use App\Http\Controllers\OrganisationController;
 use App\Http\Controllers\ProductionController;
+use App\Http\Controllers\VisitController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,5 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/direct',[DirectController::class,'index'])->name('admin.direct');
     Route::get('/admin/indirect',[IndirectController::class,'index'])->name('admin.indirect');
     Route::get('/admin/organisation',[OrganisationController::class,'index'])->name('admin.organisation');
+    Route::get('/admin/visit',[VisitController::class,'index'])->name('admin.visit');
+
     
 });
