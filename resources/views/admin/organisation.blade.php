@@ -2,102 +2,83 @@
 @section('organisation')
     <div class="card">
         <div class="card-header">
-            <h5>3 Columns Horizontal Form Layout</h5>
+            <h5>Organisation Details Form</h5>
         </div>
         <div class="card-body">
             <form>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="mb-3">
-                            <div class="row"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Name:</label>
-                                <div class="col-lg-9"><input type="email" class="form-control" placeholder="Full name">
-                                    <small class="form-text text-muted">Please enter your full name</small></div>
-                            </div>
+                            <label class="form-label">Name of the Organisation:</label>
+                            <input type="text" class="form-control" placeholder="Organisation Name">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="mb-3">
-                            <div class="row"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Email:</label>
-                                <div class="col-lg-9"><input type="email" class="form-control" placeholder="Enter email">
-                                    <small class="form-text text-muted">Please enter your email</small></div>
-                            </div>
+                            <label class="form-label">Site Name:</label>
+                            <input type="text" class="form-control" placeholder="Site Name">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="mb-3">
-                            <div class="row"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Password:</label>
-                                <div class="col-lg-9">
-                                    <div class="input-group"><span class="input-group-text"><i
-                                                class="feather icon-lock"></i></span> <input type="password"
-                                            class="form-control" placeholder="Enter Password"></div><small
-                                        class="form-text text-muted">Please enter your Password</small>
-                                </div>
-                            </div>
+                            <label class="form-label">Company Registration Number:</label>
+                            <input type="text" class="form-control" placeholder="Registration Number">
                         </div>
                     </div>
                 </div>
-                <hr class="my-3">
+               
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="mb-3">
-                            <div class="row"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Contact:</label>
-                                <div class="col-lg-9"><input type="email" class="form-control"
-                                        placeholder="Enter contact number"> <small class="form-text text-muted">Please enter
-                                        your contact</small></div>
-                            </div>
+                            <label class="form-label">Geographical Coordinates:</label>
+                            <input type="text" class="form-control" placeholder="Latitude, Longitude">
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="row">
-                            <div class="mb-3"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Profile
-                                    URL:</label>
-                                <div class="col-lg-9">
-                                    <div class="input-group search-form"><input type="text" class="form-control"
-                                            placeholder="Fax Profile URL"> <span class="input-group-text bg-transparent"><i
-                                                class="feather icon-alert-circle"></i></span></div><small
-                                        class="form-text text-muted">Please enter Profile URL</small>
-                                </div>
-                            </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address:</label>
+                            <input type="text" class="form-control" placeholder="Full Address">
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="row"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Pin code:</label>
-                            <div class="col-lg-9"><input type="text" class="form-control"
-                                    placeholder="Enter your Pin code"> <small class="form-text text-muted">Please enter your
-                                    Pin code</small></div>
+                        <div class="mb-3">
+                            <label class="form-label">Contact Person:</label>
+                            <input type="text" class="form-control" placeholder="Contact Name">
                         </div>
                     </div>
                 </div>
-                <hr class="my-3">
+               
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="mb-3">
-                            <div class="row"><label class="col-lg-3 col-form-label text-lg-end px-lg-0">Address:</label>
-                                <div class="col-lg-9"><input type="text" class="form-control"
-                                        placeholder="Enter your address"> <small class="form-text text-muted">Please enter
-                                        your address</small></div>
-                            </div>
+                            <label class="form-label">Email:</label>
+                            <input type="email" class="form-control" placeholder="Contact Email">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="mb-3">
-                            <div class="row align-items-start"><label
-                                    class="col-lg-3 col-form-label text-lg-end px-lg-0 pt-0">User Type:</label>
-                                <div class="col-lg-9">
-                                    <div>
-                                        <div class="form-check form-check-inline"><input type="radio"
-                                                id="customRadioInline231" name="customRadioInline1" class="form-check-input"
-                                                checked="checked"> <label class="form-check-label"
-                                                for="customRadioInline231">Administrator</label></div>
-                                        <div class="form-check form-check-inline"><input type="radio"
-                                                id="customRadioInline232" name="customRadioInline1"
-                                                class="form-check-input"> <label class="form-check-label"
-                                                for="customRadioInline232">Author</label></div>
-                                    </div><small class="form-text">Please select User Type</small>
-                                </div>
-                            </div>
+                            <label class="form-label">Telephone Number:</label>
+                            <input type="text" class="form-control" placeholder="Contact Number">
                         </div>
                     </div>
+                    <div class="col-lg-4">
+                        <div class="mb-3">
+                            <label class="form-label">Number of Employees:</label>
+                            <input type="number" class="form-control" placeholder="Total Employees">
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mb-3">
+                            <label class="form-label">Description of the Facility:</label>
+                            <textarea class="form-control" rows="3" placeholder="Describe the facility..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary">Save and Continue</button>
                 </div>
             </form>
         </div>

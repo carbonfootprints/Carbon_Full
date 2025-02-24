@@ -60,12 +60,12 @@
               <div class="row">
                 <div class="d-flex justify-content-center">
                   <div class="auth-header">
-                    <h2 class="text-secondary mt-5"><b>Hi, Welcome Back</b></h2>
-                    <p class="f-16 mt-2">Enter your credentials to continue</p>
+                    <h2 class="text-secondary mt-5"><b>Welcome Back, Eco-Warrior!</b></h2>
+                    <p class="f-16 mt-2 text-center">The Earth appreciates your efforts. Let’s calculate, track, and save our home, one footprint at a time 🌿</p>
                   </div>
                 </div>
               </div>
-              <h5 class="my-4 d-flex justify-content-center">Sign in with Email address</h5>
+              <h5 class="my-4 d-flex justify-content-center text-green-900">Act Today for a Greener Tomorrow</h5>
     
               <!-- Login Form Starts -->
               <form action="{{ route('login') }}" method="POST">
@@ -82,12 +82,12 @@
                 <div class="d-flex mt-1 justify-content-between">
                   <div class="form-check">
                     <input class="form-check-input input-primary" type="checkbox" id="remember" name="remember" />
-                    <label class="form-check-label text-muted" for="remember">Remember me</label>
+                    <label class="form-check-label text-muted" for="remember">Remember my footprint</label>
                   </div>
                   <a href="#" class="text-secondary">Forgot Password?</a>
                 </div>
                 <div class="d-grid mt-4">
-                  <button type="submit" class="btn btn-secondary">Sign In</button>
+                  <button type="submit" class="btn btn-secondary">Lets Dive in..</button>
                 </div>
               </form>
               <!-- Login Form Ends -->
