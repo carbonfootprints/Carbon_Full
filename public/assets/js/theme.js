@@ -3,7 +3,7 @@
 =========================================================================
 Template Name: Berry - Admin Template
 Author: CodedThemes
-Support: https://codedthemes.com/
+Support: https://codedthemes.support-hub.io/
 File: themes.js
 Description:  this file will contains overall theme setup and handle
               behavior of live custumizer like Dark/Light, LTR/RTL,
@@ -41,6 +41,7 @@ function layout_change_default() {
   });
 }
 
+
 // dark switch mode
 function dark_mode() {
   const darkModeToggle = document.getElementById('dark-mode');
@@ -53,11 +54,12 @@ function dark_mode() {
   layout_change(mode);
 }
 
+
 // preset color
 document.addEventListener('DOMContentLoaded', function () {
   const presetColors = document.querySelectorAll('.preset-color > a');
   if (presetColors.length) {
-    presetColors.forEach((colorElement) => {
+    presetColors.forEach(colorElement => {
       colorElement.addEventListener('click', function (event) {
         let targetElement = event.target;
 
@@ -105,13 +107,14 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('layout', layoutValue);
     });
   });
+
 });
 
 function font_change(name) {
   const fontUrls = {
-    Roboto: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
-    Poppins: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
-    Inter: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap'
+    'Roboto': 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+    'Poppins': 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
+    'Inter': 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap'
   };
 
   // Set the font stylesheet link
@@ -149,6 +152,7 @@ function layout_caption_change(value) {
     targetButton.classList.add('active');
   }
 }
+
 
 function preset_change(value) {
   const body = document.querySelector('body');
@@ -214,9 +218,13 @@ function layout_change(layout) {
   dark_flag = isDark;
 
   // Update logo images based on the layout
-  const logoPaths = isDark ? '../assets/images/logo-white.svg' : '../assets/images/logo-dark.svg';
+  const logoPaths = isDark
+    ? '../assets/images/logo-white.svg'
+    : '../assets/images/logo-dark.svg';
 
-  const landingLogoPath = isDark ? 'assets/images/logo-white.svg' : 'assets/images/logo-dark.svg';
+  const landingLogoPath = isDark 
+    ? 'assets/images/logo-white.svg' 
+    : 'assets/images/logo-dark.svg';
 
   const logoSelectors = [
     '.pc-sidebar .m-header .logo-lg',
@@ -236,6 +244,7 @@ function layout_change(layout) {
     }
   });
 }
+
 
 function change_box_container(value) {
   const content = document.querySelector('.pc-content');
