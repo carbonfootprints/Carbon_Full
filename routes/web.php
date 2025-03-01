@@ -33,7 +33,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/admin/indirect',[IndirectController::class,'index'])->name('admin.indirect');
 
-    Route::get('/admin/organisation/{visit_id}',[OrganisationController::class,'index'])->name('admin.organisation');
+    Route::get('/organisation/{visit_id}', [OrganisationController::class, 'index'])->name('organisation.create');
+Route::post('/organisation/{visit_id}', [OrganisationController::class, 'store'])->name('organisation.store');
 
     
     // Corrected: Unique URLs for each direct form

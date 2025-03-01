@@ -31,7 +31,7 @@ class VisitController extends Controller
     ]);
 
     // Redirect to Direct Form One with the visit ID
-    return redirect()->route('admin.organisation', ['visit_id' => $visit->id]);
+    return redirect()->route('organisation.create', ['visit_id' => $visit->id]);
 }
 
     public function sidebar()

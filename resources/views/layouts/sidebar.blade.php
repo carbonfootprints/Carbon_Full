@@ -28,74 +28,69 @@
                     </a>
                 </li>
                 <li class="pc-item {{ $visit ? '' : 'disabled' }}">
-                    <a href="{{ $visit ? route('admin.organisation', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                    <a href="{{ $visit ? route('organisation.create', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Organisation</span>
                     </a>
                 </li>                
+
                 
-                <li class="pc-item {{ isset($visit) && $visit->company_details ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) ? route('admin.organisation', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
-                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
-                        <span class="pc-mtext">Organisation</span>
-                    </a>
-                </li>
-                
-                <li class="pc-item {{ isset($visit) && $visit->directformone ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->directformone ? route('admin.directFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->directformone ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->directformone ? route('admin.directFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Direct 1</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->directformtwo ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->directformtwo ? route('admin.directFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->directformtwo ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->directformtwo ? route('admin.directFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Direct 2</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->directformthree ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->directformthree ? route('admin.directFormThree', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->directformthree ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->directformthree ? route('admin.directFormThree', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Direct 3</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->indirectfirstformone ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->indirectfirstformone ? route('admin.indirectFirstFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->indirectfirstformone ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->indirectfirstformone ? route('admin.indirectFirstFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Indirect 1.1</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->indirectfirstformtwo ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->indirectfirstformtwo ? route('admin.indirectFirstFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->indirectfirstformtwo ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->indirectfirstformtwo ? route('admin.indirectFirstFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Indirect 1.2</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->indirectsecondformone ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->indirectsecondformone ? route('admin.indirectSecondFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->indirectsecondformone ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->indirectsecondformone ? route('admin.indirectSecondFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Indirect 2.1</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->indirectsecondformtwo ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->indirectsecondformtwo ? route('admin.indirectSecondFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->indirectsecondformtwo ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->indirectsecondformtwo ? route('admin.indirectSecondFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Indirect 2.2</span>
                     </a>
                 </li>
                 
-                <li class="pc-item {{ isset($visit) && $visit->indirectsecondformthree ? '' : 'disabled' }}">
-                    <a href="{{ isset($visit) && $visit->indirectsecondformthree ? route('admin.indirectSecondFormThree', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->indirectsecondformthree ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->indirectsecondformthree ? route('admin.indirectSecondFormThree', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Indirect 2.3</span>
                     </a>
                 </li>
+                
                 
                 <li class="pc-item disabled">
                     <a href="#" class="pc-link">
