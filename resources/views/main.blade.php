@@ -37,7 +37,14 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
 
+<style>
+    .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
+</style>
 
 </head>
 
@@ -49,7 +56,7 @@
         </div>
     </div>
 
-    @include('layouts.sidebar')
+    @include('layouts.sidebar', ['visit' => \App\Models\Visit::where('user_id', Auth::id())->latest()->first()])
     @include('layouts.topbar')
 
 

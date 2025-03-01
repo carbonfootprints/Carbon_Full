@@ -33,25 +33,32 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/admin/indirect',[IndirectController::class,'index'])->name('admin.indirect');
 
-    Route::get('/admin/organisation',[OrganisationController::class,'index'])->name('admin.organisation');
+    Route::get('/admin/organisation/{visit_id}',[OrganisationController::class,'index'])->name('admin.organisation');
 
-    Route::get('/admin/visit',[VisitController::class,'index'])->name('admin.visit');
-
+    
     // Corrected: Unique URLs for each direct form
-    Route::get('/admin/direct/form-one',[DirectController::class,'directFormOne'])->name('admin.directFormOne');
-
+    Route::get('/admin/direct/form-one/{visit_id}', [DirectController::class, 'directFormOne'])->name('admin.directFormOne');
+    
+    
     Route::get('/admin/direct/form-two',[DirectController::class,'directFormTwo'])->name('admin.directFormTwo');
-
+    
     Route::get('/admin/direct/form-three',[DirectController::class,'directFormThree'])->name('admin.directFormThree');
-
-   Route::get('/admin/indirect/first-form-one', [IndirectController::class, 'indirectFirstFormOne'])->name('admin.indirectFirstFormOne');
-
+    
+    Route::get('/admin/indirect/first-form-one', [IndirectController::class, 'indirectFirstFormOne'])->name('admin.indirectFirstFormOne');
+    
     Route::get('/admin/indirect/first-form-two', [IndirectController::class, 'indirectFirstFormTwo'])->name('admin.indirectFirstFormTwo');
-
+    
     Route::get('/admin/indirect/second-form-one', [IndirectController::class, 'indirectSecondFormOne'])->name('admin.indirectSecondFormOne');
-
+    
     Route::get('/admin/indirect/second-form-two', [IndirectController::class, 'indirectSecondFormTwo'])->name('admin.indirectSecondFormTwo');
     
     Route::get('/admin/indirect/second-form-three', [IndirectController::class, 'indirectSecondFormThree'])->name('admin.indirectSecondFormThree');
+    
+    
+    
+    
+    Route::get('/admin/visit',[VisitController::class,'index'])->name('admin.visit');
+    Route::post('/admin/visit', [VisitController::class, 'store'])->name('visits.store');
+
 
 });
