@@ -2,7 +2,7 @@
 @section('default')
 
 
-      <div class="row">
+      <div class="row"> 
         
       </div>
       

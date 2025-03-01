@@ -3,7 +3,7 @@
 <!-- [Head] start -->
 
 <head>
-   
+
     <title>Dashboard | Berry Dashboard Template</title>
     <!-- [Meta] -->
     <meta charset="utf-8" />
@@ -18,37 +18,31 @@
 
     <!-- [Favicon] icon -->
     <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/star-rating.min.css') }}">
+
     <!-- [Google Font] Family -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
         id="main-font-link" />
-    <!-- [phosphor Icons] https://phosphoricons.com/ -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/phosphor/duotone/style.css') }}" />
-    <!-- [Tabler Icons] https://tablericons.com -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/tabler-icons.min.css') }}" />
-    <!-- [Feather Icons] https://feathericons.com -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/feather.css') }}" />
-    <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome.css') }}" />
-    <!-- [Material Icons] https://fonts.google.com/icons -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/material.css') }}" />
     <!-- [Template CSS Files] -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/style-preset.css') }}" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> --}}
+
+
+
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
 
 
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --}}
-
 </head>
-<!-- [Head] end -->
-<!-- [Body] Start -->
+
 
 <body>
-    <!-- [ Pre-loader ] start -->
     <div class="loader-bg">
         <div class="loader-track">
             <div class="loader-fill"></div>
@@ -68,34 +62,80 @@
             @yield('direct')
             @yield('indirect')
             @yield('organisation')
-           
+            @yield('directformone')
+            @yield('directformtwo')
+            @yield('directformthree')
+
+            @yield('indirectFirstFormOne')
+            @yield('indirectFirstFormTwo')
+            @yield('indirectSecondFormOne')
+            @yield('indirectSecondFormTwo')
+            @yield('indirectSecondFormThree')
+
 
         </div>
     </div>
 
 
 
-
     <script src="{{ asset('assets/js/plugins/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/simplebar.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/plugins/i18next.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/i18nextHttpBackend.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/js/multi-lang.js') }}"></script> --}}
+
     <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/fonts/custom-font.js') }}"></script>
+    <script src="{{ asset('assets/js/icon/custom-font.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
     <script src="{{ asset('assets/js/theme.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/feather.min.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="{{ asset('assets/js/plugins/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/swiper-bundle.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/plugins/wizard.min.js') }}"></script> --}}
 
-    {{-- <script>
-        $(document).ready(function() {
-            $('#myTable').DataTable();
+    {{-- <script src="{{ asset('assets/js/plugins/tiny-slider.js')}}"></script>
+    <script src="{{ asset('assets/js/elements/ac-slider.js')}}"></script> --}}
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const formSelectors = [
+                "#companyDetailForm",
+                "#directFormOne",
+                "#directFormTwo",
+                "#directFormThree",
+                "#indirectFirstFormOne",
+                "#indirectFirstFormTwo",
+                "#indirectSecondFormOne",
+                "#indirectSecondFormTwo",
+                "#indirectSecondFormThree"
+            ];
+
+            formSelectors.forEach(selector => {
+                const inputs = document.querySelectorAll(`${selector} input`);
+
+                inputs.forEach(input => {
+                    input.addEventListener("input", function() {
+                        this.classList.add("is-valid"); // Add Bootstrap success class
+                        this.classList.remove("is-invalid"); // Remove error class if valid
+                    });
+
+                    input.addEventListener("blur", function() { // When user leaves input
+                        if (!this.checkValidity()) { // Check if input is valid
+                            this.classList.add(
+                            "is-invalid"); // Apply error class if invalid
+                            this.classList.remove("is-valid");
+                        } else {
+                            this.classList.add("is-valid");
+                            this.classList.remove("is-invalid");
+                        }
+                    });
+                });
+            });
         });
-    </script> --}}
-        
-    {{-- <script src="{{ asset('assets/js/plugins/apexcharts.min.js')}}"></script> --}}
-    {{-- <script src="{{ asset('assets/js/pages/dashboard-default.js')}}"></script> --}}
-    <!-- [Page Specific JS] end -->
+    </script>
+
+
 </body>
 <!-- [Body] end -->
 

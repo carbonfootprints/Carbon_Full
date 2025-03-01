@@ -16,39 +16,96 @@
                 <li class="pc-item">
                     <a href="{{ route('default') }}" class="pc-link"><span class="pc-micon"><i
                                 class="ti ti-dashboard"></i></span><span class="pc-mtext">Default</span></a>
-                </li>
-
+                </li> 
                 <li class="pc-item pc-caption">
-                    <label>Elements</label>
+                    <label>Calculate</label>
                     <i class="ti ti-apps"></i>
                 </li>
                 <li class="pc-item">
-                    <a href="{{ route('admin.production') }}" class="pc-link">
+                    <a href="{{ route('admin.visit') }}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Start Visit</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.organisation') }}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Organisation</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.directFormOne')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Direct 1</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.directFormTwo')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Direct 2</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.directFormThree')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Direct 3</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.indirectFirstFormOne')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 1.1</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.indirectFirstFormTwo')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 1.2</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.indirectSecondFormOne')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 2.1</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.indirectSecondFormTwo')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 2.2</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="{{ route('admin.indirectSecondFormThree')}}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 2.3</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="#" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 3.1</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="#" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Indirect 3.2</span>
+                    </a>
+                </li>
+                <li class="pc-item">
+                    <a href="#" class="pc-link">
 
                         <span class="pc-micon"><i class="ti ti-inbox"></i></span>
                         <span class="pc-mtext">Production System</span>
                     </a>
                 </li>
                 <li class="pc-item">
-                    <a href="{{ route('admin.boundary') }}" class="pc-link">
+                    <a href="#" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-color-swatch"></i></span>
                         <span class="pc-mtext">Boundary</span>
                     </a>
                 </li>
-                <li class="pc-item">
-                    <a href="{{ route('admin.visit') }}" class="pc-link">
-                        <span class="pc-micon"><i class="ti ti-file-plus"></i></span>
-                        <span class="pc-mtext">Create Visit</span>
-                    </a>
-                </li>
-                <li class="pc-item">
-                    <a href="{{ route('admin.organisation') }}" class="pc-link">
-                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
-                        <span class="pc-mtext">Lets Calculate</span>
-                    </a>
-                </li>
-                
-
 
             </ul>
 

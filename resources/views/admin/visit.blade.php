@@ -2,9 +2,9 @@
 @section('production')
     <div class="card">
         <div class="card-header">
-            <h5>Create Visit</h5>
+            <h5>Start Visit</h5>
         </div>
-        <div class="card-body">
+        <div class="card-body" >
             <form id="visitForm" method="post" action="#" class="was-validated">
                 <div class="row mt-4">
                     <div class="col-sm-6">
@@ -22,14 +22,13 @@
                             <input type="text" class="form-control" name="visit_code" id="visit_code" readonly>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-shadow btn-outline-secondary w-auto">Start Calculation</button>
+
 
                 </div>
             </form>
         </div>
+        <div class="card-footer"><button class="btn btn-primary me-2">Start Calculation</button></div>
     </div>
-
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Generate unique visit code
