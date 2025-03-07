@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\CompanyDetail;
+use App\Models\Visit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class OrganisationController extends Controller
 {
-    public function index($visit_id){
+    public function index($visit_id)
+    {
         return view('admin.organisation', compact('visit_id'));
     }
 
@@ -41,8 +45,17 @@ class OrganisationController extends Controller
             'facility_description' => $validatedData['facility_description'],
         ]);
 
+        Log::info($visit_id);
+        $visit = Visit::find($visit_id);
+        Log::info($visit);
+        if ($visit) {
+            $visit->update(['company_details' => '1']);
+        } else {
+            return redirect()->back()->with('error', 'Visit not found.');
+        }
+
         // Redirect to the form-one route with the visit_id
         return redirect()->route('admin.directFormOne', ['visit_id' => $visit_id])
-                         ->with('success', 'Organisation details saved successfully.');
+            ->with('success', 'Organisation details saved successfully.');
     }
 }

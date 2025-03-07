@@ -32,18 +32,24 @@
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Organisation</span>
                     </a>
-                </li>                
-
+                </li>  
                 
-                <li class="pc-item {{ $visit && $visit->directformone ? '' : 'disabled' }}">
-                    <a href="{{ $visit && $visit->directformone ? route('admin.directFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->company_details ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->company_details ? route('admin.directFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Direct 1</span>
                     </a>
                 </li>
+
+                {{-- <li class="pc-item {{ $visit && $visit->directformone ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->directformone ? route('admin.directFormOne', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                        <span class="pc-micon"><i class="ti ti-wind"></i></span>
+                        <span class="pc-mtext">Direct 1</span>
+                    </a>
+                </li> --}}
                 
-                <li class="pc-item {{ $visit && $visit->directformtwo ? '' : 'disabled' }}">
-                    <a href="{{ $visit && $visit->directformtwo ? route('admin.directFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
+                <li class="pc-item {{ $visit && $visit->directformone ? '' : 'disabled' }}">
+                    <a href="{{ $visit && $visit->directformone ? route('admin.directFormTwo', ['visit_id' => $visit->id]) : '#' }}" class="pc-link">
                         <span class="pc-micon"><i class="ti ti-wind"></i></span>
                         <span class="pc-mtext">Direct 2</span>
                     </a>

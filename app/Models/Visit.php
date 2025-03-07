@@ -9,6 +9,10 @@ class Visit extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'company_details' => 'boolean',
+    ];
+    
     protected $fillable = [
         'user_id',
         'visit_code',
